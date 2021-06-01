@@ -1,0 +1,89 @@
+@import "~@robokassa/robomarket-components/src/common";
+
+.store__header {
+  //margin-bottom: 56px;
+
+  & .title {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-bottom: 12px;
+  }
+
+  & .caption {
+    font-family: "Gerbera", "Helvetica", sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 40px;
+    color: #9da1a3;
+    cursor: pointer;
+    text-decoration: none;
+    margin-right: 32px;
+  }
+
+  & .active {
+    color: #141414;
+  }
+
+  & .main {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  & .text {
+    font-family: "Gerbera", "Helvetica", sans-serif;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 24px;
+    color: #000000;
+  }
+
+  & .link {
+    margin-left: 4px;
+    color: #ff5722;
+    transition: 0.3s;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  & .clear {
+    margin-top: 12px;
+    font-family: "Gerbera", "Helvetica", sans-serif;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 24px;
+    color: #ff5722;
+    transition: 0.3s;
+    text-decoration: none;
+    cursor: pointer;
+  }
+}
+
+@media (min-width: 768px) {
+  .store__header {
+
+    & .caption {
+      font-size: 40px;
+      line-height: 52px;
+
+      //&--history {
+      //  display: block;
+      //  margin-left: 32px;
+      //}
+      //
+      //&--history-mob {
+      //  display: none;
+      //}
+    }
+
+    & .main {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    & .clear {
+      margin-top: 0;
+    }
+  }
+}

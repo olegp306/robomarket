@@ -1,0 +1,47 @@
+@import '~@robokassa/robomarket-components/src/common';
+
+.orderTotal {
+  box-sizing: border-box;
+  background: #F4F6F7;
+  border-radius: 4px;
+  padding: 25px 15px;
+}
+
+.merchantTitle {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+  cursor: pointer;
+}
+
+.titleText {
+  @include text-medium;
+  font-weight: 600;
+}
+
+.orderTotalList {
+  @include text-medium;
+  padding: 20px 0;
+  border-top: 1px solid #E6EAEB;
+  border-bottom: 1px solid #E6EAEB;
+}
+
+.orderTotalItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.orderTotalPrice {
+  @include text-subtitle;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  line-height: 36px;
+  margin-top: 15px;
+  span {
+    font-size: 32px;
+  }
+}

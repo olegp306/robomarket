@@ -1,0 +1,96 @@
+@import '~@robokassa/robomarket-components/src/common';
+.productWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 40px;
+  position: relative;
+}
+
+.deliveryWrapper {
+  min-width: 200px;
+}
+
+.bottomBorder {
+  margin-bottom: 40px;
+  border-bottom: 1px solid #d7dee0;
+}
+
+.imageAndProductName {
+  display: flex;
+  width: 376px;
+}
+
+.image {
+  width: 96px;
+  height: 96px;
+  border: none;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.productName {
+  margin-left: 20px;
+  font-size: 17px;
+  color: #141414 !important;
+}
+
+.noDeliveryOptionsInCity {
+  margin-top: 20px;
+  font-size: 17px;
+  color: #ff4778;
+  line-height: 21px;
+}
+
+.croppedProductName {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  -webkit-line-clamp: 4;
+  line-height: 24px;
+  max-height: 96px;
+  width: 240px;
+}
+
+.removeProductWrapper {
+  position: absolute;
+  right: 16px;
+}
+
+.removeProduct {
+  width: 24px;
+  height: 24px;
+  color: #d7dee0;
+  cursor: pointer;
+  border: none;
+}
+
+.priceWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.oldPriceWrapper {
+  margin-top: 4px;
+}
+
+.price {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.counterWrapper {
+  margin-top: 20px;
+  //min-width: 200px;
+}
+
+@media (max-width: 768px) {
+  .removeProductWrapper {
+    right: 0px;
+  }
+  .deliveryWrapper {
+    margin-top: 10px;
+  }
+  .imageAndProductName {
+    display: flex;
+  }
+}

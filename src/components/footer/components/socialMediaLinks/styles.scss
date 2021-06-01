@@ -1,0 +1,9 @@
+@import '~@robokassa/robomarket-components/src/common';
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  width: 120px;
+}

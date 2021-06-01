@@ -1,0 +1,58 @@
+@import "~@robokassa/robomarket-components/src/common";
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background: linear-gradient(180deg, #363B5B 0%, #2A2E43 100%);
+  box-shadow: 0 4px 40px rgba(21, 28, 32, 0.08);
+}
+
+.content {
+  flex: 1 1 auto;
+  background: #F6F9FA;
+}
+
+.sidebar__shop__title {
+  height: 52px;
+}
+
+.sidebar__shop__title__text {
+  font-family: $font-noto-sans;
+  top: 24px;
+  font-weight: bold;
+  font-size: 11px;
+  line-height: 16px;
+  letter-spacing: 0.01em;
+  color: #8893AA;
+}
+
+.sidebar__shop__items {
+  display: none;
+}
+
+.sidebar__item {
+  position: relative;
+  left: 24px;
+}
+
+.sidebar__hr {
+  height: 2px;
+  width: calc(100% - 48px);
+  background: #363B5B;
+  margin: auto auto 24px 0;
+}
+
+.sidebar__logo {
+  margin: 0 auto 24px 0;
+}
+
+.sidebar__arrow {
+  position: relative;
+  left: 278px;
+}
+
+.sidebar__text {
+  font-family: $font-noto-sans;
+  font-style: normal;
+}

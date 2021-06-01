@@ -1,0 +1,7 @@
+:3000
+
+uri strip_prefix /
+
+root * /var/www
+try_files {path} index.html
+file_server

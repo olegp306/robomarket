@@ -1,0 +1,119 @@
+@import "~@robokassa/robomarket-components/src/common";
+
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  height: 64px;
+  padding: 16px 0;
+}
+
+.searchProductWrapper {
+  width: 100%;
+  padding: 0 10px;
+}
+
+.headerLeft {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.headerRight {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 200px;
+}
+
+.iconsWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 120px;
+}
+.cartIconWrapper{
+  width: 24px;
+  height: 24px;
+}
+
+.allCategoriesWrapper {
+  display: none;
+}
+
+.geoButton {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.popupClose {
+  position: absolute;
+  top: 11px;
+  right: 11px;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  z-index: 2;
+  transition: 0.3s;
+
+  &::after {
+    @include pseudo-element;
+    top: calc(50% - 6.5px);
+    right: calc(50% - 6.5px);
+    width: 13px;
+    height: 13px;
+    background-image: url("data:image/svg+xml,%3Csvg width='13' height='13' viewBox='0 0 13 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='11.314' width='2' height='16' transform='rotate(45 11.314 0)' fill='%238893AA'/%3E%3Crect x='12.728' y='11.3137' width='2' height='16' transform='rotate(135 12.728 11.3137)' fill='%238893AA'/%3E%3C/svg%3E%0A");
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+}
+
+.searchOnTop {
+  position: absolute;
+  width: 100vw;
+}
+
+@media (max-width: 768px) {
+  .header {
+    height: 56px;
+  }
+
+  .headerRight{
+    width: auto;
+    padding-right: 16px ;
+  }
+
+  .geoButton {
+    display: none;
+  }
+
+  .allCategoriesWrapper {
+    display: block;
+  }
+
+  .searchProductWrapper {
+    width: auto;
+  }
+}
+

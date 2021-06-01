@@ -1,0 +1,11 @@
+@import "~@robokassa/robomarket-components/src/common";
+
+.breadCrumbs {
+  @include text-body;
+  padding: 10px 0 10px 0;
+  color: #707375;
+}
+
+.breadCrumbsLink {
+  cursor: pointer;
+}

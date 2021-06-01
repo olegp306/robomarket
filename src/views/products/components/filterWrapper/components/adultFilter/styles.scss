@@ -1,0 +1,17 @@
+@import "~@robokassa/robomarket-components/src/common";
+
+.wrapper {
+  margin-top: 25px;
+  max-width: 304px;
+}
+
+.title {
+  color: $color-black;
+  @include --text-base();
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.checkbox {
+  margin-top: 10px;
+}

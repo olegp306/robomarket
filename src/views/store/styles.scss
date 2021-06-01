@@ -1,0 +1,113 @@
+@import "~@robokassa/robomarket-components/src/common";
+
+.storeInfo {
+  margin-top: 60px;
+}
+
+.storeName {
+  @include --text-base();
+  font-size: 40px;
+  font-weight: bold;
+  margin:20px 0px 20px 0px;
+}
+
+.storeHeader {
+  display: flex;
+  flex-direction: row;
+}
+
+.description {
+  margin-top: 12px;
+    @include text-subtitle;
+}
+
+
+.logoWrapper {
+  display: flex;
+  justify-content: flex-end;
+  flex: 1;
+}
+
+.logo {
+  //display: block;
+  //position: absolute;
+  //top: 50%;
+  //left: 50%;
+  //max-width: 100%;
+  //max-height: 100%;
+  //transform: translateX(-50%) translateY(-50%)
+}
+
+
+.additionalStoreInfo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background: #f0f8fb;
+  position: relative;
+  margin: 36px 0px 36px 0px;
+
+  &::before, &::after {
+    right: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 1000px;
+    background: #f0f8fb;
+    content: "";
+  }
+
+  &::after {
+    left: 100%
+  }
+
+}
+
+.infoWrapper {
+  position: relative;
+  padding: 30px 30px 30px 0;
+
+}
+
+.infoTitle, .infoText {
+  @include --text-base();
+  font-size: 18px;
+  padding-bottom: 10px;
+}
+
+.infoTitle {
+  font-weight: bold;
+}
+
+.wrapper {
+  margin: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+
+  h2, h3, h4 {
+    margin: 15px 0 10px 0;
+    font-weight: bold;
+  }
+
+  h2 {
+    @include heading-2();
+    font-weight: bold;
+  }
+
+  h3 {
+    @include heading-3();
+    font-weight: bold;
+  }
+
+  h4 {
+    @include heading-4();
+  }
+
+  a {
+    color: $color-orange-medium;
+    text-decoration: none;
+    transition: .3s;
+  }
+}

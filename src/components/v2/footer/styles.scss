@@ -1,0 +1,110 @@
+@import '../styles.scss';
+
+.footer {
+  background: $footer-bg-color;
+  overflow-x: hidden;
+  padding-top: 26px;
+}
+
+.footerTitle {
+  @include --heading-1();
+  color: $color-white;
+  font-size: 26px;
+  margin-bottom: 8px;
+}
+
+.footerSubTitle {
+  @include --text-medium();
+  color: $color-gray;
+  font-size: 16px;
+  margin-bottom: 24px;
+}
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.contact {
+  @include --heading-1();
+  font-weight: normal;
+  line-height: 0;
+  color: $color-white;
+  margin-bottom: 20px;
+}
+
+.contactLabel {
+  @include --text-medium();
+  color: $color-gray;
+}
+
+.contactLink {
+  @include heading-3();
+  color: $color-white;
+}
+
+.copyrightWrapper {
+  @include text-body();
+  display: flex;
+  flex-direction: column;
+  min-height: 86px;
+  padding: 15px 0;
+  border-top: 1px solid #373F50;
+  color: $color-gray;
+}
+
+.copyrightLink {
+  color: $color-white;
+}
+
+.copyright {
+  margin: 12px 0;
+}
+
+.publicOffer {
+  margin: 12px 0;
+}
+
+@media (min-width: 768px) {
+  .footer {
+    padding-top: 64px;
+  }
+
+  .footerTitle {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 16px;
+  }
+
+  .footerSubTitle {
+    text-align: center;
+    margin-bottom: 24px;
+  }
+
+  .contacts {
+    flex-direction: row;
+  }
+
+  .contact {
+    text-align: center;
+    line-height: 48px;
+    margin: 0 15px;
+  }
+
+  .copyrightWrapper {
+    padding: 0;
+    flex-direction: row;
+    align-items: center;
+    color: $color-gray;
+  }
+
+  .copyright {
+    flex-grow: 1;
+  }
+
+  .publicOffer {
+    padding-left: 58px;
+  }
+}

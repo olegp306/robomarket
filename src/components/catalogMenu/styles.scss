@@ -1,0 +1,60 @@
+@import "~@robokassa/robomarket-components/src/common";
+
+.catalogHeaderWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-top: solid 1px $color-gray-xlight;
+  border-bottom: solid 1px $color-gray-xlight;
+}
+
+.catalogMenuWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  height: 52px;
+  align-items:center;
+}
+
+.menuItemText, .whatIsRoboWrapper {
+  @include --text-base();
+  font-size: 17px;
+  //line-height: 52px;
+  margin-left: 24px;
+  transition-duration: .3s;
+  vertical-align: top;
+
+  &:hover {
+    color: $color-orange-medium;
+    cursor: pointer;
+  }
+}
+.whatIsRobomarket{
+  @include text-subtitle;
+  padding: 10px 0 0 5px;
+
+  &:hover {
+    color: $color-orange-medium;
+  }
+}
+
+.faq {
+  @include --text-base();
+  font-size: 17px;
+  line-height: 52px;
+  margin-left: 24px;
+  transition-duration: .3s;
+  color: #707375;
+
+  &:hover {
+    color: $color-orange-medium;
+    cursor: pointer;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .catalogHeaderWrapper {
+    display: none;
+  }
+}

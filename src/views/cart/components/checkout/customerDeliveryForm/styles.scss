@@ -1,0 +1,111 @@
+@import "~@robokassa/robomarket-components/src/common";
+
+  .caption {
+  @include heading-41();
+  font-weight: 600;
+  color: #141414;
+  margin-bottom: 16px;
+}
+
+  .field {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 12px 0;
+    width: 100%;
+  }
+
+  .input {
+    @include heading-5();
+    width: 100%;
+    height: 56px;
+    margin: 0;
+    padding: 0 16px;
+    color: #141414;
+    background-color: #ffffff;
+    border: 1px solid #e6eaeb;
+    border-radius: 4px;
+    transition: 0.3s;
+
+    &.error_input {
+    border-color: $color-red-dark;
+    }
+  }
+
+  .marginRight{
+    margin-right: 30px;
+  }
+
+
+
+  .inputBorder {
+    position: absolute;
+    content: "";
+    display: none;
+    left: 0;
+    right: 0;
+    top: 66px;
+    height: 2px;
+    border-radius: 0 0 4px 4px;
+    background-color: #ff4778;
+    z-index: 8;
+    transition: 0.3s;
+
+    &__low {
+      background-color: #ff5722;
+    }
+
+    &__promo {
+      width: calc(100% - 152px);
+    }
+  }
+
+  .label {
+    @include heading-5();
+    position: absolute;
+    top: 28px;
+    left: 17px;
+    color: #9da1a3;
+    transition: 0.3s;
+    cursor: text;
+    pointer-events: none;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
+  .smallLabel {
+      top: 4px;
+      left: 9px;
+      padding: 0 8px;
+      font-size: 14px;
+      line-height: 20px;
+      background-color: white;
+    }
+
+  .error {
+    @include text-body();
+    padding: 0 16px;
+    line-height: 20px;
+    color: #ff4778;
+  }
+
+
+  .promoWrapper{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+
+.errorMessage {
+  padding: 0 16px;
+  margin-top: 8px;
+  color: #ff4778;
+  font-size: 14px;
+  line-height: 20px;
+  white-space: normal;
+}

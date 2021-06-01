@@ -1,0 +1,142 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: storefront
+  namespace: $namespace
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      deploy: storefront
+  template:
+    metadata:
+      labels:
+        deploy: storefront
+    spec:
+      imagePullSecrets:
+        - name: regcred
+      containers:
+        - name: storefront
+          image: proget.cozykassa.com/robomarket-docker/library/storefront:$version
+          resources:
+          env:
+          - name: DYNACONF_SANIC__jwt__secret
+            valueFrom:
+              secretKeyRef:
+                name: mysecret
+                key: DYNACONF_SANIC__JWT__SECRET
+          - name: DYNACONF_DB__host
+            valueFrom:
+              secretKeyRef:
+                name: mysecret
+                key: DYNACONF_DB__HOST
+          - name: DYNACONF_DB__database
+            valueFrom:
+              secretKeyRef:
+                name: mysecret
+                key: DYNACONF_DB__DATABASE
+          - name: DYNACONF_DB__password
+            valueFrom:
+              secretKeyRef:
+                name: mysecret
+                key: DYNACONF_DB__PASSWORD
+          - name: DYNACONF_DB__cluster
+            valueFrom:
+              secretKeyRef:
+                name: mysecret
+                key: DYNACONF_DB__CLUSTER
+          - name: DYNACONF_EMAIL__activation_code__secret
+            valueFrom:
+              secretKeyRef:
+                name: mysecret
+                key: DYNACONF_EMAIL__ACTIVATION_CODE__SECRET
+          - name: DYNACONF_EMAIL__smtp__password
+            valueFrom:
+              secretKeyRef:
+                name: mysecret
+                key: DYNACONF_EMAIL__SMTP__PASSWORD
+          - name: DYNACONF_SMS__easysms__password
+            valueFrom:
+              secretKeyRef:
+                name: mysecret
+                key: DYNACONF_SMS__easysms__password
+          - name: DYNACONF_CACHE__redis__host
+            valueFrom:
+              secretKeyRef:
+                name: mysecret
+                key: DYNACONF_CACHE__REDIS__HOST
+          - name: DYNACONF_CACHE__redis__database
+            valueFrom:
+              secretKeyRef:
+                name: mysecret
+                key: DYNACONF_CACHE__REDIS__DATABASE
+          - name: DYNACONF_CACHE__redis__password
+            valueFrom:
+              secretKeyRef:
+                name: mysecret
+                key: DYNACONF_CACHE__REDIS__PASSWORD
+          - name: DYNACONF_LOGGING__sentry__dsn
+            valueFrom:
+              secretKeyRef:
+                name: mysecret
+                key: DYNACONF_LOGGING__SENTRY__DSN
+          - name: DYNACONF_SERVICES__robomarket__orders__username
+            valueFrom:
+              secretKeyRef:
+                name: mysecret
+                key: DYNACONF_SERVICES__ROBOMARKET__ORDERS__USERNAME
+          - name: DYNACONF_SERVICES__robomarket__orders__password
+            valueFrom:
+              secretKeyRef:
+                name: mysecret
+                key: DYNACONF_SERVICES__ROBOMARKET__ORDERS__PASSWORD
+          - name: DYNACONF_SERVICES__robokassa__transactions__api_key
+            valueFrom:
+                secretKeyRef:
+                  name: mysecret
+                  key: DYNACONF_SERVICES__ROBOKASSA__TRANSACTIONS__API_KEY
+          - name: ENV_FOR_DYNACONF
+            valueFrom:
+              secretKeyRef:
+                name: mysecret
+                key: ENV_FOR_DYNACONF
+          - name: GitVersion
+            value: $version
+          ports:
+            - containerPort: 3000
+
+---
+
+kind: Service
+apiVersion: v1
+metadata:
+  name: storefront
+  namespace: $namespace
+  labels:
+    deploy: storefront
+spec:
+  selector:
+    deploy: storefront
+  ports:
+    - name: http
+      port: 3000
+      protocol: TCP
+
+---
+
+kind: Ingress
+apiVersion: extensions/v1beta1
+metadata:
+  name: storefront
+  namespace: $namespace
+  annotations:
+    kubernetes.io/ingress.class: nginx
+spec:
+  rules:
+    - host: $sitename
+      http:
+        paths:
+          - backend:
+              serviceName: storefront
+              servicePort: 3000
+            path: /

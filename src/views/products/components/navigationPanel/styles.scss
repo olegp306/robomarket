@@ -1,0 +1,14 @@
+@import '~@robokassa/robomarket-components/src/common';
+
+.navigationWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center
+}
+
+.paginationWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+

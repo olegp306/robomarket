@@ -1,0 +1,158 @@
+@import "~@robokassa/robomarket-components/src/common";
+
+.productPicturesWrapper {
+  display: flex;
+  flex-direction: row;
+  margin-right: 64px;
+}
+
+.productDiscount {
+  position: absolute;
+  z-index: 100;
+  left: 110px;
+  top: 20px;
+  display: inline-block;
+  background: #ff5722;
+  height: 32px;
+  padding: 0 12px;
+  font-size: 17px;
+  font-weight: 600;
+  color: #fff;
+  line-height: 32px;
+  border-radius: 4px;
+}
+
+
+.smallImagesWrapper {
+  margin: 0 5px 5px 0;
+}
+
+
+.smallImageWrapper, .bigImageWrapper{
+  overflow: hidden;
+}
+
+.smallImageWrapper {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  border-radius: 4px;
+  margin: 0 20px 10px 0;
+  cursor: pointer;
+}
+
+.smallImage {
+  display: block;
+  max-width: 100%;
+  cursor: pointer;
+}
+
+.bigImageWrapper {
+  width: 640px;
+  height: 640px;
+  border-radius: 4px;
+  border: 1px solid #d7dee0;
+}
+
+.blurImage {
+  filter: blur(7px);
+  -webkit-filter: blur(7px);
+}
+
+.bigImage {
+  cursor: zoom-in;
+}
+
+.adultProductMark {
+  position: absolute;
+  z-index: 100;
+  left: 180px;
+  top: 20px;
+  display: inline-block;
+  background: #000;
+  height: 32px;
+  padding: 0 12px;
+  font-size: 17px;
+  font-weight: 600;
+  color: #fff;
+  line-height: 32px;
+  border-radius: 4px;
+}
+
+.adultProductMegaMark {
+  position: absolute;
+  z-index: 100;
+  top: 40%;
+  left: 52%;
+}
+
+.adultProductMegaMarkText {
+  margin-left: -75px;
+  font-family: "Gerbera", "Helvetica", sans-serif;
+  font-size: 17px;
+  line-height: 34px;
+  text-align: center;
+  letter-spacing: -0.01em;
+  color: #141414;
+}
+
+
+@media (max-width: 1440px) {
+  .productPicturesWrapper {
+    width: 536px;
+    margin-right: 48px;
+  }
+
+  .smallImageWrapper {
+    width: 56px;
+    height: 56px;
+  }
+
+  .bigImageWrapper {
+    width: 454px;
+    height: 454px;
+  }
+
+  .adultProductMegaMark {
+    top: 30%;
+}
+}
+
+@media (max-width: 768px) {
+  .bigImageWrapper {
+    display: none;
+  }
+
+  .productPicturesWrapper {
+    overflow: auto;
+    width: auto;
+    margin: 0;
+  }
+  .smallImagesWrapper {
+    display: flex;
+    flex-direction: row;
+  }
+  .smallImageWrapper {
+    width: 246px;
+    height: 246px;
+  }
+
+  .productDiscount {
+    left: 18px;
+  }
+
+  .adultProductMark {
+    left: 87px;
+  }
+
+  .adultProductMegaMark {
+    top: 30%;
+    left: 19%;
+  }
+
+  .adultProductMegaMarkText {
+    margin-left: -60px;
+    font-size: 14px;
+    line-height: 24px;
+  }
+}

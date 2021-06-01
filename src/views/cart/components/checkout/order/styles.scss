@@ -1,0 +1,23 @@
+@import "~@robokassa/robomarket-components/src/common";
+
+.orderWrapper {
+  //padding-bottom: 20px;
+}
+
+.error {
+    @include text-body();
+    margin-top: 8px;
+    padding: 0 16px;
+    line-height: 20px;
+    color: #ff4778;
+  }
+
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-bottom: 40px;
+  }
+
+

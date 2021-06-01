@@ -1,0 +1,43 @@
+@import '~@robokassa/robomarket-components/src/common';
+
+.noProductsWrapper{
+  margin-top: 50px;
+}
+
+.title {
+  @include --text-base();
+  font-size: 40px;
+  font-weight: bolder;
+  margin-bottom: 40px;
+  line-height: normal;
+}
+
+.smallTitle {
+  @include --text-base();
+  font-size: 20px;
+  font-weight: bolder;
+  margin-bottom: 30px;
+}
+
+.recomendationsWrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.recomendationWrapper {
+  display: flex;
+  flex-direction: column;
+  margin-right: 30px;
+}
+
+.recomendationText {
+  @include --text-base();
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .noProductsWrapper {
+    padding: 0 15px;
+  }
+}

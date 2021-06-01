@@ -1,0 +1,22 @@
+@import "~@robokassa/robomarket-components/src/common";
+
+.desktopWrapper{
+  display: flex;
+  flex-direction: column;
+  margin-top: 24px;
+  min-width: 296px;
+}
+
+.mobileWrapper {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .desktopWrapper {
+    display: none;
+  }
+
+  .mobileWrapper {
+    display: block;
+  }
+}

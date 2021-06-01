@@ -1,0 +1,62 @@
+@import '~@robokassa/robomarket-components/src/common';
+
+.promoWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.caption {
+  @include heading-41();
+  font-weight: 600;
+  color: #141414;
+  margin-bottom: 16px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.promoButton {
+  min-width: 130px;
+  margin-left: 10px;
+}
+
+.input {
+  @include heading-5();
+  width: 100%;
+  height: 56px;
+  margin: 0;
+  padding: 0 16px;
+  color: #141414;
+  background-color: #ffffff;
+  border: 1px solid #e6eaeb;
+  border-radius: 4px;
+  transition: 0.3s;
+
+  &.error_input {
+    border-color: $color-red-dark;
+  }
+}
+
+.marginRight {
+  margin-right: 30px;
+}
+
+.message,
+.error {
+  padding: 0 16px;
+  margin-top: 8px;
+  color: $color-green-dark;
+  font-size: 14px;
+  line-height: 20px;
+  white-space: normal;
+  font-weight: bold;
+}
+
+.error {
+  color: $color-red-dark;
+  font-weight: normal;
+}

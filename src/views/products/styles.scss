@@ -1,0 +1,56 @@
+@import "~@robokassa/robomarket-components/src/common";
+
+.viewWrapper {
+  position: relative;
+  margin-top: 25px;
+}
+
+.filterAndSortWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.filterSwitch {
+  @include --text-base();
+  font-size: 17px;
+  color: #707375;
+  min-width: 230px;
+
+  &:hover{
+    cursor: pointer;
+  }
+}
+
+.filterSwitchDesktop {
+  display: block;
+}
+
+.filterSwitchMobile {
+  display: none;
+}
+
+.productsOrderPickerWrapper{
+  width: 250px;
+}
+
+.productsAndFiltersWrapper{
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .filterAndSortWrapper {
+    padding: 0 15px;
+  }
+
+  .filterSwitchDesktop {
+    display: none;
+  }
+
+  .filterSwitchMobile {
+    display: block;
+  }
+}

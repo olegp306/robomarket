@@ -1,0 +1,166 @@
+@import "~@robokassa/robomarket-components/src/common";
+
+.footerWrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-top: 96px;
+  background: #f4f6f7;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+
+  &::before, &::after {
+    right: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 1000px;
+    background: #f4f6f7;
+    overflow: hidden;
+    content: '';
+  }
+
+  &::after {
+    left: 100%
+  }
+}
+
+.footerContent {
+  padding-left: 0px;
+}
+
+.logoSection {
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: 96px;
+}
+
+.horizontalLine {
+  height: 1px;
+  background: #e6eaeb;
+}
+
+.menuSection {
+  padding: 0px 0px 40px 0px;
+}
+
+.bottomSection {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 0px 40px 0px;
+}
+
+.footerMenu {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.menuTitle {
+  @include --text-base();
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 24px;
+  color: #141414;
+}
+
+.menuItem {
+  @include --text-base();
+  font-size: 14px;
+  color: #141414cc;
+  padding-top: 16px;
+
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.support {
+  @include --text-base();
+  font-size: 14px;
+  line-height: 20px;
+  color: #141414;
+
+  padding-right: 16px;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+}
+
+.supportAndPublicOffer {
+  display: flex;
+  flex-direction: row;
+  max-width: 300px;
+}
+
+.copyright {
+  @include --text-base();
+  font-size: 14px;
+  color: #9da1a3;
+}
+
+
+@media(max-width: 1440px) {
+  .footerWrapper {
+    width: 936px;
+  }
+  .menu {
+    width: 202px;
+  }
+}
+
+
+@media(max-width: 768px) {
+  .footerWrapper {
+    width: 100%;
+    &::before, &::after {
+      position: relative;
+      right: 0;
+      width: 0;
+    }
+  }
+
+
+.logoSection {
+  height: 72px;
+}
+
+  .logoSection,.menuSection, .bottomSection {
+    padding-left: 16px;
+  }
+
+  .footerMenu {
+    flex-direction: column;
+  }
+
+  .supportAndPublicOffer {
+    flex-direction: column;
+  }
+  .support {
+    margin-top: 15px;
+  }
+
+  .bottomSection {
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .footerContent {
+    width: 100vm;
+  }
+  .copyright {
+    margin-top: 15px;
+  }
+}

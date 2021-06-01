@@ -1,0 +1,13 @@
+@import '~@robokassa/robomarket-components/src/common';
+
+.wrapper {
+  font-size: 17px;
+  line-height: 24px;
+  font-weight: 400;
+  transition: 0.3s;
+}
+.regionName {
+  margin-left: 4px;
+  color: #ff5722;
+  cursor: pointer;
+}

@@ -1,0 +1,77 @@
+@import '~@robokassa/robomarket-components/src/common';
+
+.orderSuccessWrapper {
+  padding: 0 15px;
+  @include text-body;
+  margin-top: 40px;
+}
+
+.orderSuccessTitle {
+  @include heading-1;
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 52px;
+  margin-bottom: 18px;
+}
+
+.orderSuccessText {
+  @include text-medium;
+}
+
+.orderInfo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 30px;
+}
+
+.title {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-basis: 100%;
+}
+
+.titleText {
+  @include heading-3;
+  font-weight: 600;
+  margin-right: 25px;
+}
+
+.subTitle {
+  @include text-medium;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.orderPersonalData {
+  padding: 20px 0 25px;
+  border-bottom: 1px solid #E6EAEB;
+}
+
+// descended styles
+
+.orderDetailWrapper,
+.orderTotal {
+  flex-basis: 100%;
+}
+
+.orderTotal {
+  margin-top: 20px;
+}
+
+@media (min-width: 768px) {
+  .orderSuccessWrapper {
+    padding: 0;
+  }
+
+  .orderDetailWrapper,
+  .orderTotal {
+    flex-basis: calc(50% - 15px);
+  }
+
+  .orderTotal {
+    margin-top: 0;
+  }
+}

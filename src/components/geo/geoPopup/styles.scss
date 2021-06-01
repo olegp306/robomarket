@@ -1,0 +1,58 @@
+@import '../../../../node_modules/@robokassa/robomarket-components/src/common';
+
+.header {
+  @include heading-1();
+  font-weight: 600;
+  color: $color-black;
+  transition: 0.3s;
+}
+
+.searchInput {
+  padding-top: 28px;
+
+  & input {
+    @include text-list-14();
+    color: #151c20;
+    height: 56px;
+    width: 100%;
+    border-radius: 6px;
+    box-sizing: border-box;
+    padding: 0 25px;
+    background: #ebeff1;
+    border: 2px solid #ebeff1;
+    transition: 0.3s;
+    cursor: pointer;
+  }
+}
+
+.regionSearch {
+  @include heading-5();
+}
+
+.regionSearchItem {
+  @include heading-5();
+
+  &:hover {
+    color: $color-orange-medium;
+    cursor: pointer;
+  }
+}
+
+.suggestGeo {
+  margin-top: 28px;
+}
+
+.geoHeader {
+  @include heading-5();
+  font-weight: 600;
+}
+
+.popularItem {
+  @include heading-5();
+  cursor: pointer;
+  margin-top: 12px;
+
+  &:hover {
+    color: $color-orange-medium;
+  }
+}

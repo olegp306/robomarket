@@ -1,0 +1,262 @@
+@import '~@robokassa/robomarket-components/src/common';
+
+.smoothAppearance{
+  @include smoothAppearance()
+}
+
+.wrapper {
+  margin: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+
+  h2, h3 {
+    margin: 15px 0 10px 0;
+    font-weight: bold;
+  }
+
+  h2 {
+    @include heading-2();
+    font-weight: bold;
+  }
+
+  h3 {
+    @include heading-3();
+    font-weight: bold;
+  }
+
+  a {
+    color: $color-orange-medium;
+    text-decoration: none;
+    transition: .3s;
+  }
+}
+
+
+.productInfo {
+  display: flex;
+  flex-direction: row;
+  margin-top: 24px;
+}
+
+.rightWrapper {
+  min-width: 384px;
+}
+
+.leftWrapper {
+  position: relative;
+  width: 100%;
+}
+
+.description {
+  max-width: 642px;
+  white-space: pre-line;
+  text-align: justify;
+  margin: 48px 24px 0 105px;
+  @include text-subtitle;
+
+  h1 {
+    @include heading-1;
+  }
+  h2 {
+    @include heading-2;
+  }
+  h3 {
+    @include heading-3;
+  }
+  h4 {
+    @include heading-4;
+  }
+  h5 {
+    @include heading-5;
+  }
+  h6 {
+    @include heading-6;
+  }
+  p {
+    margin: 10px 0;
+  }
+  a {
+    cursor: pointer;
+  }
+  ul {
+    padding-left: 40px;
+    list-style: disc;
+    margin: 15px 0;
+  }
+  li {
+    margin: 10px 0;
+  }
+  b, strong {
+    font-weight: bold;
+  }
+  i, em {
+    font-style: italic;
+  }
+  hr {
+    height: 2px;
+    background: #d7dee0;
+    border: none;
+    margin: 20px 0;
+  }
+  table {
+    border-collapse: collapse;
+    border: 1px solid grey;
+    margin: 15px 0;
+  }
+  th, td {
+    padding: 10px 15px;
+    border: 1px solid grey;
+  }
+  th {
+    font-weight: bold;
+  }
+}
+
+.deliveryWrapper {
+  margin-top: 20px;
+}
+
+.actionsWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  margin-top: 20px;
+}
+
+.productArticleTitle,
+.productPrice {
+  @include heading-1;
+}
+
+.productPrice {
+  font-weight: bolder;
+  margin: 16px 0 16px 0;
+}
+
+.productOldPriceWrapper {
+  display: inline-block;
+  position: relative;
+  line-height: 24px;
+  font-size: 17px;
+  color: #141414;
+  vertical-align: baseline;
+}
+
+.productOldPrice {
+  @include --text-base();
+  font-size: 17px;
+
+  &:after {
+    content: '';
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: absolute;
+    left: -8px;
+    right: -8px;
+    top: 45%;
+    color: #f54538;
+    height: 0;
+    border-bottom: 2px solid #ff5722;
+    -webkit-transform: rotate(-10deg);
+    -ms-transform: rotate(-10deg);
+    transform: rotate(-10deg);
+  }
+}
+
+.productDiscountWrapper {
+  position: absolute;
+  left: 50px;
+}
+
+.productDiscount {
+  display: inline-block;
+  height: 32px;
+  background: #ff5722;
+  padding: 0 12px;
+  font-size: 17px;
+  font-weight: 600;
+  color: #fff;
+  line-height: 32px;
+  border-radius: 4px;
+}
+
+.error {
+  color: $color-red-dark;
+  padding: 10px;
+}
+
+.errorDelivery {
+  @include heading-5();
+  color: $color-red-dark;
+  font-size: 17px;
+}
+
+.buttonBuy {
+  margin-top: 10px;
+  width: 220px;
+}
+
+.goToCartButton {
+  border-color: $color-orange-medium;
+
+  &:hover {
+    color: $color-orange-medium;
+    border-color: $color-orange-medium;
+  }
+}
+
+.smallText {
+  color: inherit;
+  font-size: 11px;
+  font-weight: normal;
+  &:hover {
+    color: inherit;
+  }
+}
+
+.buttonLabel {
+  font-size: 17px;
+}
+
+.disable {
+  pointer-events: none;
+  opacity: 0.4;
+}
+
+@media (max-width: 1440px) {
+  .description {
+    max-width: 455px;
+    margin: 48px 24px 0 82px;
+    @include text-subtitle;
+  }
+}
+
+@media (max-width: 768px) {
+  .rightWrapper {
+    min-width: initial;
+    width: 100%;
+  }
+
+  .productWrapper {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .productInfo {
+    flex-wrap: wrap;
+  }
+
+  .description {
+    max-width: 388px;
+    margin: 20px 0;
+    @include text-subtitle;
+  }
+
+  .buttonBuy {
+    margin-top: 10px;
+    width: 100%;
+  }
+}

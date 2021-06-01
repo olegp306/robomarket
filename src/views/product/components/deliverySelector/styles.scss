@@ -1,0 +1,67 @@
+@import "~@robokassa/robomarket-components/src/common";
+
+.deliverySelectorWrapper{
+  background-color: $color-gray-xxlight;
+  border-radius: 5px;
+  padding: 10px;
+
+  & .deliveryType {
+    @include text-subtitle;
+    padding: 10px;
+  }
+
+  & div:not(:last-child) {
+      border-bottom: 1px solid $color-gray-light-40;
+  }
+
+  & .deliveryZones {
+    @include text-body;
+    background-color: white;
+    padding: 5px;
+    cursor: pointer;
+    flex-wrap: nowrap;
+
+    & div {
+      border: none;
+    }
+
+    & .svgWrapper {
+      min-width: 23px;
+    }
+
+    & .svg {
+      height: 13px;
+      padding-left: 10px;
+    }
+
+    & .deliveryCost {
+      @include text-body;
+      font-weight: bold;
+    }
+  }
+
+}
+
+.deliveryDescription{
+  @include text-body;
+  padding: 10px 0 10px 32px;
+  color: #707375;
+}
+
+.deliveryDescriptionZone{
+  @include text-body;
+  padding: 5px 0;
+  color: $color-gray-medium;
+}
+
+.checkBox {
+  padding-top: 2px;
+}
+
+.deliveryRegionCost {
+  @include text-body;
+  margin: 5px;
+  padding: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}

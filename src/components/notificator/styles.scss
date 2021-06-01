@@ -1,0 +1,33 @@
+.notificator{
+    //animation-duration: 0.3s;
+    //animation-name: slidein;
+    position: fixed;
+    top: 66px;
+    right: 36px;
+    width: 360px;
+    padding: 20px 28px;
+    box-sizing: border-box;
+    background: #fff;
+    box-shadow: 0 0 2px #d7dee0, 0 4px 16px rgba(215,222,224,.65);
+    border-radius: 4px;
+    z-index: 64;
+    //visibility: hidden;
+    //opacity: 0;
+
+}
+
+.visible{
+    //opacity: 1;
+    //visibility: visible;
+    //-webkit-transform: translateX(0);
+    //-ms-transform: translateX(0);
+    //transform: translateX(0);
+}
+
+@keyframes cssAnimation {
+    to {
+        width:0;
+        height:0;
+        overflow:hidden;
+    }
+}

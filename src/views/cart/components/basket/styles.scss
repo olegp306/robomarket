@@ -1,0 +1,219 @@
+@import '~@robokassa/robomarket-components/src/common';
+
+.smoothAppearance{
+  @include smoothAppearance()
+}
+
+.horizontalLine {
+  position: relative;
+  height: 16px;
+  background: #f4f6f7;
+  width: 100%;
+  margin: 20px 0;
+
+  &::before,
+  &::after {
+    position: absolute;
+    height: inherit;
+    background: inherit;
+    width: 1600px;
+    content: '';
+    right: 100%;
+  }
+  &::after {
+    left: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .horizontalLine {
+    &::before,
+    &::after {
+      width: 16px;
+    }
+  }
+}
+
+.footerWrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-top: 96px;
+  background: #f4f6f7;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+
+  &::before,
+  &::after {
+    right: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 1000px;
+    background: #f4f6f7;
+    overflow: hidden;
+    content: '';
+  }
+
+  &::after {
+    left: 100%;
+  }
+}
+
+.title {
+  @include heading-1;
+  font-weight: 600;
+  color: #141414;
+  margin-bottom: 20px;
+}
+
+.main {
+  @include --text-base();
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.goods {
+  margin-bottom: 32px;
+  min-height: 136px;
+  flex-grow: 0;
+
+  & .removeProduct {
+    width: 24px;
+    height: 24px;
+    color: #d7dee0;
+    cursor: pointer;
+    border: none;
+  }
+
+  & .img__wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-basis: auto;
+    width: 96px;
+    height: 96px;
+    cursor: pointer;
+    border: none;
+    border-radius: 6px;
+    overflow: hidden;
+  }
+
+  & .img {
+    max-width: 96px;
+    max-height: 96px;
+    margin: auto;
+    border: none;
+  }
+}
+
+.price {
+  font-size: 17px;
+
+  & .caption {
+    @include heading-4();
+    font-weight: 600;
+    color: #141414;
+  }
+
+  & .counterWrapper {
+    margin-top: 20px;
+  }
+
+  & .discount {
+    @include text-body();
+    position: relative;
+    margin: 4px auto 0 0;
+    line-height: 20px;
+    color: #141414;
+
+    &::before {
+      position: absolute;
+      content: '';
+      display: block;
+      left: -4px;
+      right: -4px;
+      top: 45%;
+      color: #f54538;
+      height: 0;
+      border-bottom: 2px solid #ff5722;
+      transform: rotate(-10deg);
+    }
+  }
+
+  & .delete {
+    width: 24px;
+    height: 24px;
+    margin-left: auto;
+    padding: 0;
+    background-color: transparent;
+    cursor: pointer;
+  }
+}
+
+.disableOrderNotification {
+  font-size: 17px;
+  line-height: 24px;
+
+  color: #ff4778;
+  padding: 15px 20px;
+  margin-bottom: 20px;
+  background: #ffe9ef;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .goods {
+    width: 100%;
+    margin-bottom: 24px;
+    & .product {
+      flex-direction: row;
+    }
+  }
+
+  .price-wrapper {
+    width: 100%;
+  }
+
+  .unableProduct {
+    margin-left: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .main {
+    flex-wrap: nowrap;
+  }
+
+  .goods {
+    width: 596px;
+    margin-bottom: 0;
+  }
+
+  .unableProduct {
+    margin-left: -23px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .goods {
+    width: 1040px;
+  }
+
+  .price-wrapper {
+    width: 208px;
+  }
+
+  .unableProduct {
+    margin-left: 23px;
+  }
+}

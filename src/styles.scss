@@ -1,0 +1,30 @@
+@import '~@robokassa/robomarket-components/src/common';
+
+body {
+  overflow-x: hidden;
+}
+
+.wrapper {
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+
+@media (min-width: 768px) {
+  .wrapper {
+    width: 100%;
+    margin: 0 auto;
+    overflow-x: visible;
+  }
+}
+
+@media (min-width: 1024px) {
+  .wrapper {
+    width: 936px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .wrapper {
+    width: 1312px;
+  }
+}
